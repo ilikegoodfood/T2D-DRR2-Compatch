@@ -1,0 +1,5 @@
+﻿on_game_start = {
+	on_actions = {	
+		ilgf_fix_religions
+	}
+}

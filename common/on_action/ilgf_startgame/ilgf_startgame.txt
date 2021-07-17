@@ -1,0 +1,5 @@
+﻿ilgf_fix_religions = {
+	effect = {
+		ilgf_fix_religions_effect = yes
+	}
+}

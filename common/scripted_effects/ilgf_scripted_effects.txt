@@ -1,0 +1,79 @@
+﻿ilgf_fix_religions_effect = {
+	if = {
+		limit = { # Double-check to make certain this has not already happened
+			NOT = { exists = global_var:ilgf_flag_fix_religion_decision }
+		}
+		set_global_variable = { # Add global variable to prevent this from happening more than once
+			name = ilgf_flag_fix_religion_decision
+			value = yes
+		}
+		### Fixing individual Faiths
+		## Celtic Religions
+		# Brythonic
+		faith:brythonic_pagan = {
+			if = {
+				limit = {
+					NOT = { has_doctrine = tenet_human_sacrifice }
+				}
+				add_doctrine = tenet_human_sacrifice
+			}
+		}
+		# Gaelic
+		faith:gaelic_pagan = {
+			if = {
+				limit = {
+					NOT = { has_doctrine = tenet_human_sacrifice }
+				}
+				add_doctrine = tenet_human_sacrifice
+			}
+		}
+		# Gaulish
+		faith:gaulish_pagan = {
+			if = {
+				limit = {
+					NOT = { has_doctrine = tenet_human_sacrifice }
+				}
+				add_doctrine = tenet_human_sacrifice
+			}
+		}
+		# Welsh
+		# Scheduled for removal
+		faith:welsh_pagan = {
+			if = {
+				limit = {
+					NOT = { has_doctrine = tenet_human_sacrifice }
+				}
+				add_doctrine = tenet_human_sacrifice
+			}
+		}
+		## Egyptain Religions
+		# Kemetic
+		faith:kemetic_pagan = {
+			if = {
+				limit = {
+					NOT = { has_doctrine = tenet_ancestor_worship }
+				}
+				add_doctrine = tenet_ancestor_worship
+			}
+		}
+		# Aten
+		faith:atenist_pagan = {
+			if = {
+				limit = {
+					NOT = { has_doctrine = tenet_sun_worship }
+				}
+				add_doctrine = tenet_sun_worship
+			}
+		}
+		## Levantine Religions
+		# Yahwism
+		faith:yahwism_pagan = {
+			if = {
+				limit = {
+					NOT = { has_doctrine = tenet_adaptive }
+				}
+				add_doctrine = tenet_adaptive
+			}
+		}
+	}
+}
